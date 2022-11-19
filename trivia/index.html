@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section1">
+                <h3 class="questions">What does DOM stand for?</h3>
+                <div id="button-div">
+                    <button id='one' class='answer-button' type="button">Domination of men</button>
+                    <button id='two' class='answer-button' type="button">Document object model</button>
+                    <button id='three' class='answer-button' type="button">Domain opt mirror</button>
+                    <h4 id="question-one-answer"></h4>
+                </div>
+            </div>
+
+            <div class="section2">
+                <h3>Is Harvard CS50 better than anything Yale has ever produced?</h3>
+                <div class="part-two">
+                    <input id='in' type="text" placeholder="answer: yes or no">
+                    <button type="button" id="input-button">submit</button>
+                </div>
+                <h4 id="question-two-answer"></h4>
+            </div>
+        </div>
+        <script>
+            const buttonOne = document.getElementById('one')
+            const buttonTwo = document.getElementById('two')
+            const buttonThree = document.getElementById('three')
+            const quesOne = document.getElementById('question-one-answer')
+            const quesTwoButton = document.getElementById('input-button')
+            const quesTwoInput = document.getElementById('in')
+            const quesTwo = document.getElementById('question-two-answer')
+
+            buttonOne.addEventListener("click", function() {
+                buttonOne.classList.add('addRed')
+                buttonTwo.classList.remove('addGreen')
+                buttonThree.classList.remove('addRed')
+                quesOne.innerText="Incorrect"
+            })
+            buttonTwo.addEventListener("click", function() {
+                buttonOne.classList.remove('addRed')
+                buttonTwo.classList.add('addGreen')
+                buttonThree.classList.remove('addRed')
+                quesOne.innerText="Correct"
+            })
+            buttonThree.addEventListener("click", function() {
+                buttonOne.classList.remove('addRed')
+                buttonTwo.classList.remove('addGreen')
+                buttonThree.classList.add('addRed')
+                quesOne.innerText="Incorrect"
+            })
+            quesTwoButton.addEventListener("click", function() {
+                if(quesTwoInput.value == 'yes' || quesTwoInput.value == 'Yes'){
+                    quesTwo.innerText="Correct"
+                    quesTwoInput.classList.add('addGreen')
+                }
+                else {
+                    quesTwo.innerText="Incorrect"
+                    quesTwoInput.classList.add('addRed')
+                }
+            })
+        </script>
+    </body>
+</html>

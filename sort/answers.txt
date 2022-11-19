@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: returned shortest run time for list already sorted.
+
+sort2 uses: merge sort
+
+How do you know?: fasted run time for scrambled lists.
+
+sort3 uses: selection sort
+
+How do you know?: slowest sorting, even on presorted lists.

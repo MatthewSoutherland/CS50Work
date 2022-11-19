@@ -1,0 +1,314 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(180, 180, 200);
+}
+
+#jump {
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60rem, auto;
+}
+
+#player-color-div {
+    padding-left: 2rem;
+    padding-top: 1rem;
+    grid-row: 1;
+}
+
+#player-color-form {
+    position:absolute;
+    left: 3rem;
+}
+
+#player-role-form {
+    position:absolute;
+    left: 15rem;
+}
+
+#player-role-div {
+    padding-top: 1rem;
+    grid-row: 1;
+}
+
+form {
+    font-weight: 600;
+    font-size: 1.2rem;
+    background-color: rgb(150, 150, 170);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .2rem;
+    padding-bottom: .1rem;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+form label {
+    font-size: 1rem;
+    cursor: pointer;
+}
+form input {
+    color: black;
+}
+
+.players {
+    font-weight: 600;
+    font-size: 1.2rem;
+    grid-row: 2;
+    grid-column: 1;
+    padding: 1rem;
+    padding-top: 20rem;
+}
+
+.hero {
+    width: 7rem;
+    height: 9.5rem;
+    object-fit:contain;
+    cursor: pointer;
+    padding: .1rem;
+    padding-top: .2rem;
+}
+
+.teamHero {
+    width: 7rem;
+    height: 9.5rem;
+    object-fit:contain;
+    cursor: pointer;
+    padding: .1rem;
+    padding-top: .2rem;
+}
+
+.teams {
+    grid-column: 2;
+    grid-row: 2;
+    font-weight: 600;
+    padding: 1rem;
+    padding-left: 2rem;
+    font-size: 1.2rem;
+}
+
+p {
+    margin: 0px;
+    padding-bottom: 0px;
+}
+
+ p:hover {
+    color: black;
+    animation-name: guy;
+    animation-duration: 3s;
+    animation-timing-function:ease-in;
+    animation-iteration-count: infinite;
+}
+
+@keyframes guy {
+    0% {
+        color: black;
+    }
+    25% {
+        color: brown;
+    }
+    50% {
+        color: red;
+    }
+    75% {
+        color: orange;
+    }
+100% {
+        color: yellow;
+    }
+
+}
+
+#team-one {
+    position:absolute;
+    top: 2rem;
+    background-color: rgb(150, 150, 170);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#team-two {
+    position:absolute;
+    top: 14rem;
+    background-color: rgb(150, 150, 170);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#team-three {
+    position:absolute;
+    top: 26rem;
+    background-color: rgb(150, 150, 170);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#team-four {
+    position:absolute;
+    top: 38rem;
+    background-color: rgb(150, 150, 170);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#team-five {
+    position:absolute;
+    top: 50rem;
+    background-color: rgb(150, 150, 170);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#team-six {
+    position:absolute;
+    top: 62rem;
+    background-color: rgb(150, 150, 170);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+@media (max-width: 1250px) {
+     .hero {
+        width: 5rem;
+        height: 7rem;
+        object-fit:contain;
+        cursor: pointer;
+        padding: 1px;
+    }
+    .players {
+        padding-top: 18rem;
+       }
+    .teamHero {
+        width: 5rem;
+        height: 7rem;
+        object-fit:contain;
+        cursor: pointer;
+        padding: 1px;
+    }
+    #team-two {
+        top: 12rem;
+    }
+    #team-three {
+        top: 22rem;
+    }
+    #team-four {
+        top: 32rem;
+    }
+    #team-five {
+        top: 42rem;
+    }
+    #team-six {
+        top: 52rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+       width: 3.5rem;
+       height: 5rem;
+       object-fit:contain;
+       cursor: pointer;
+       padding: 1px;
+   }
+   .players {
+    padding-top: 15rem;
+   }
+   .teamHero {
+    width: 3.5rem;
+    height: 5rem;
+    object-fit:contain;
+    cursor: pointer;
+    padding: 1px;
+}
+   #player-color-form {
+    font-size: 1rem;
+    left: 2.5rem;
+}
+#player-role-form {
+    font-size: 1rem;
+    left: 12rem;
+   }
+   #team-two {
+    top: 10rem;
+}
+#team-three {
+    top: 18rem;
+}
+#team-four {
+    top: 26rem;
+}
+#team-five {
+    top: 34rem;
+}
+#team-six {
+    top: 42rem;
+}
+}
+
+@media (max-width: 650px) {
+    .hero {
+       width: 2.5rem;
+       height: 4rem;
+       object-fit:contain;
+       cursor: pointer;
+       padding: 1px;
+   }
+   .players {
+    padding-top: 14rem;
+   }
+   .teamHero {
+    width: 2.5rem;
+    height: 4rem;
+    object-fit:contain;
+    cursor: pointer;
+    padding: 1px;
+}
+   #player-color-form {
+    font-size: .9rem;
+    left: 2rem;
+   }
+   #player-color-form label {
+    font-size: .8rem;
+   }
+   #player-role-form {
+    font-size: .9rem;
+    left: 10rem;
+   }
+   #player-role-form label {
+    font-size: .8rem;
+   }
+   #team-two {
+    top: 8rem;
+}
+#team-three {
+    top: 14rem;
+}
+#team-four {
+    top: 20rem;
+}
+#team-five {
+    top: 26rem;
+}
+#team-six {
+    top: 32rem;
+}
+}
